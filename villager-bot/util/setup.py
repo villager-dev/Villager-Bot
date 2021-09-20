@@ -1,25 +1,15 @@
+from hikari.intents import Intents
 import classyjson as cj
 import asyncpg
 import logging
-import discord
 import random
 import os
 
-
-def villager_bot_intents() -> discord.Intents:
-    return discord.Intents(
-        guilds=True,
-        members=True,
-        bans=True,
-        emojis=False,
-        integrations=False,
-        webhooks=False,
-        invites=False,
-        voice_states=False,
-        presences=True,
-        messages=True,
-        reactions=True,
-        typing=False,
+def villager_bot_intents() -> int:
+    return (
+        Intents.ALL_GUILDS
+        | Intents.ALL_MESSAGES
+        | Intents.ALL_MESSAGE_REACTIONS
     )
 
 
@@ -84,7 +74,7 @@ def update_fishing_prices(d: cj.ClassyDict):
 
 def mod_data(d: cj.ClassyDict) -> None:
     # make discord.py color class from value in data.json
-    d.cc = getattr(discord.Color, d.embed_color)()
+    # d.cc = getattr(discord.Color, d.embed_color)()
 
     # update fishing data, generate fishing weights
     update_fishing_prices(d)
