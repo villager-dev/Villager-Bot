@@ -5,12 +5,9 @@ import logging
 import random
 import os
 
+
 def villager_bot_intents() -> int:
-    return (
-        Intents.ALL_GUILDS
-        | Intents.ALL_MESSAGES
-        | Intents.ALL_MESSAGE_REACTIONS
-    )
+    return Intents.ALL_GUILDS | Intents.ALL_MESSAGES | Intents.ALL_MESSAGE_REACTIONS
 
 
 def setup_logging(shard_ids: list) -> logging.Logger:

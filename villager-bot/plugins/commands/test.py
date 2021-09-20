@@ -10,9 +10,11 @@ class TestPlugin(lightbulb.Plugin):
         await ctx.respond("Test!")
         await ctx.respond(embed=hikari.Embed(title="Test"))
 
+
 def load(bot):
     print("loaded")
     bot.add_plugin(TestPlugin())
+
 
 def unload(bot):
     bot.remove_plugin("TestPlugin")
