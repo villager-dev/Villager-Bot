@@ -1368,7 +1368,7 @@
             "O **esqueleto** deu um 360 e sem mira atingiu você!",
             "Uma flecha foi lançada do **esqueleto**, apenas uma.",
             "Um tiro na cabeça do **esqueleto** para você!",
-            "BOOM! TIRO NA CABEÇA! - **esqueleto** 2025"
+            "BOOM! TIRO NA CABEÇA! - **esqueleto** {}"
           ],
           "finishers": [
             "O **esqueleto** te deu um 360 sem mira em você pela última vez!",

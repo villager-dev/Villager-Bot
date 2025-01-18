@@ -1368,7 +1368,7 @@
             "¡El **esqueleto** dió un giro de 360° y sin apuntar te dió!",
             "El **esqueleto** te lanza una flecha, sólo una.",
             "¡Un tiro en la cabeza del **esqueleto** da en ti!",
-            "¡BOOM! ¡UN TIRO EN LA CABEZA! - **esqueleto** 2025"
+            "¡BOOM! ¡UN TIRO EN LA CABEZA! - **esqueleto** {}"
           ],
           "finishers": [
             "El **esqueleto** dió un giro de 360° y sin apuntar te dió por ultima vez!",

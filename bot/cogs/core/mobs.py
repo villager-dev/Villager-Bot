@@ -6,6 +6,7 @@ import typing
 
 import classyjson as cj
 import discord
+from datetime import datetime, timezone
 from discord.ext import commands
 
 from bot.cogs.core.database import Database
@@ -288,7 +289,11 @@ class MobSpawner(commands.Cog):
                     await ctx.send_embed(random.choice(mob.finishers))
                     break
                 # send mob attack
-                await ctx.send_embed(random.choice(mob.attacks))
+                mob_attack_text = random.choice(mob.attacks)
+                if "{}" in mob_attack_text:
+                    mob_attack_text = mob_attack_text.format(datetime.now(tz=timezone.utc).year)
+
+                await ctx.send_embed(mob_attack_text)
 
                 async with SuppressCtxManager(ctx.typing()):
                     await asyncio.sleep(0.75 + random.random() * 2)
